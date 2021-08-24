@@ -25,19 +25,17 @@ class App extends React.Component {
         <Router>
             <Header />
             <Switch>
-            {isAuthenticated && (
+            
         
               <Route exact path="/">
-                {/* TODO: if the user is logged in, render the `Home` component, if they are not, render the `Login` component */}
-                <Home />
+              {this.props.auth0.isAuthenticated && <Home />}
               </Route>
-              )}
-                          {isAuthenticated && (
+              
 
               <Route exact path="/favFlowers">
-              <FavFlowers /> /* TODO: if the user is logged in, render the `FavFlowers` component, if they are not, render the `Login` component */
+              {this.props.auth0.isAuthenticated && <FavFlowers />}
               </Route>
-                          )}
+                          
             <Login />
             
             </Switch>
