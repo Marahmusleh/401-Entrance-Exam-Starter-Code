@@ -76,6 +76,7 @@ close = () =>{
         <FavCards
         apiCrudData={this.state.apiCrudData}
         deleteFavFlowers={this.deleteFavFlowers}
+        handelModalUpdate={this.handelModalUpdate}
         />
   }
 

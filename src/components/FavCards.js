@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
-// import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button'
 
 
 export class FavCards extends Component {
@@ -22,7 +22,7 @@ export class FavCards extends Component {
                     {obj.instructions}
                     </Card.Text>
                     <Button onClick={()=>{this.props.deleteFavFlowers(obj._id)}} variant='primary'>Delete</Button>
-                    <Button onClick={()=>{this.props.updateFavFlowers(obj)}} variant='primary'>Update</Button>
+                    <Button onClick={()=>{this.props.handelModalUpdate(obj)}} variant='primary'>Update</Button>
                   </Card.Body>
                 </Card>
               </Col>
